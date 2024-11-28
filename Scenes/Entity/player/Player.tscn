@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://clcdi87ddjqs4"]
+
+[ext_resource type="ArrayMesh" uid="uid://nfjqulcx5q8" path="res://Models/pl.obj" id="1_wsfgh"]
+[ext_resource type="Script" path="res://Scenes/Entity/player/character_body_3d.gd" id="2_g8kl8"]
+
+[sub_resource type="GDScript" id="GDScript_q6t3v"]
+script/source = "extends Node3D
+"
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_juqwv"]
+radius = 1.0587
+height = 4.50668
+
+[node name="Player" type="Node3D"]
+script = SubResource("GDScript_q6t3v")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("2_g8kl8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0133722, 2.69451, 0.0535865)
+shape = SubResource("CapsuleShape3D_juqwv")
+
+[node name="Pl" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = ExtResource("1_wsfgh")
+skeleton = NodePath("../..")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.94364, -0.991154)
+fov = 85.7
