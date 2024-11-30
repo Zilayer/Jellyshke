@@ -7,6 +7,9 @@ const JUMP_VELOCITY = 8.0
 var rot_x = 0
 var rot_y = 0
 
+func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -28,6 +31,11 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("Zoom"):
+		$Camera/Camera3D.fov = 20
+	if Input.is_action_just_released("Zoom"):
+		$Camera/Camera3D.fov = 75
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -42,12 +50,13 @@ func _input(event):
 		
 	if event is InputEventMouseButton:
 		if event.is_pressed():
-			if event.button_index == 4:
-				for i in range(3):
-					$Camera/Camera3D.position.y -= 0.1
-					$Camera/Camera3D.position.z -= 0.2
-				
-			if event.button_index == 5:
-				for i in range(3):
-					$Camera/Camera3D.position.y += 0.1
-					$Camera/Camera3D.position.z += 0.2
+				if event.button_index == 4 and $Camera/Camera3D.position.y > 0 and $Camera/Camera3D.position.z > 0:
+					for i in range(3):
+						$Camera/Camera3D.position.y -= 0.1
+						$Camera/Camera3D.position.z -= 0.2
+					
+				if event.button_index == 5 and $Camera/Camera3D.position.y < 5 and $Camera/Camera3D.position.z < 10:
+					for i in range(3):
+						$Camera/Camera3D.position.y += 0.1
+						$Camera/Camera3D.position.z += 0.2
+	

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bri6b8ym6abub"]
+[gd_scene load_steps=8 format=3 uid="uid://bri6b8ym6abub"]
 
 [ext_resource type="PackedScene" uid="uid://clcdi87ddjqs4" path="res://Scenes/Entity/player/Player.tscn" id="1_ayncn"]
 [ext_resource type="ArrayMesh" uid="uid://ccoxhmg2ip8xg" path="res://Models/EO0AAAMXQ0YGMC13XX7X56I3L.obj" id="2_qqicb"]
+[ext_resource type="PackedScene" uid="uid://c7xgyt14kog4x" path="res://Scenes/Maps/Menus/pause_menu.tscn" id="3_00pf1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cpmqf"]
 sky_top_color = Color(0.285199, 0.661607, 0.831565, 1)
@@ -53,3 +54,5 @@ shape = SubResource("BoxShape3D_x08mx")
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.206353, 4.41878, 1.38064)
 mesh = ExtResource("2_qqicb")
 skeleton = NodePath("../..")
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_00pf1")]
