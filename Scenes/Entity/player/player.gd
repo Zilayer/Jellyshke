@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 const ROTATION = 0.01
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const SPEED = 8.0
+const JUMP_VELOCITY = 8.0
 
 var rot_x = 0
 var rot_y = 0
@@ -34,8 +34,8 @@ func _input(event):
 		rot_y -= event.relative.x * ROTATION
 		rot_x -= event.relative.y * ROTATION
 		
-		if rot_x > 1.3: rot_x = 1.3
-		if rot_x < -1.3: rot_x = -1.3
+		if rot_x > 1.1: rot_x = 1.1
+		if rot_x < -1.1: rot_x = -1.1
 		
 		transform.basis = Basis(Vector3(0,1,0), rot_y)
-		$Camera3D.transform.basis = Basis(Vector3(1,0,0), rot_x)
+		$Camera.transform.basis = Basis(Vector3(1,0,0), rot_x)

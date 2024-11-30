@@ -3,23 +3,23 @@
 [ext_resource type="PackedScene" uid="uid://clcdi87ddjqs4" path="res://Scenes/Entity/player/Player.tscn" id="1_ayncn"]
 [ext_resource type="ArrayMesh" uid="uid://ccoxhmg2ip8xg" path="res://Models/EO0AAAMXQ0YGMC13XX7X56I3L.obj" id="2_qqicb"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_7ggc4"]
-size = Vector3(18, 1, 17)
+[sub_resource type="BoxShape3D" id="BoxShape3D_x08mx"]
+size = Vector3(18.994, 1, 24.2836)
 
 [node name="Map" type="Node3D"]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.835675, 0.393351, -0.814396)
-shape = SubResource("BoxShape3D_7ggc4")
-
-[node name="Player" parent="." instance=ExtResource("1_ayncn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
 
 [node name="Eo0aaamxq0ygmc13xx7x56i3l" type="MeshInstance3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.0562718, 4.44632, 1.70969)
 mesh = ExtResource("2_qqicb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.934695, 0, 0.35545, 0.205409, 0.816117, 0.540148, -0.290089, 0.577886, -0.762821, 0, 16.5344, -18.7689)
+transform = Transform3D(-0.934695, -5.43194e-07, 0.35545, 0.205409, 0.816117, 0.540148, -0.290089, 0.577886, -0.762821, 0, 16.5344, -18.949)
+
+[node name="Player" parent="." instance=ExtResource("1_ayncn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.65851, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.56305, 0.346327, -0.401511)
+shape = SubResource("BoxShape3D_x08mx")
