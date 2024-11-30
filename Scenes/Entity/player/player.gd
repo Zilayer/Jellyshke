@@ -39,3 +39,15 @@ func _input(event):
 		
 		transform.basis = Basis(Vector3(0,1,0), rot_y)
 		$Camera.transform.basis = Basis(Vector3(1,0,0), rot_x)
+		
+	if event is InputEventMouseButton:
+		if event.is_pressed():
+			if event.button_index == 4:
+				for i in range(3):
+					$Camera/Camera3D.position.y -= 0.1
+					$Camera/Camera3D.position.z -= 0.2
+				
+			if event.button_index == 5:
+				for i in range(3):
+					$Camera/Camera3D.position.y += 0.1
+					$Camera/Camera3D.position.z += 0.2
