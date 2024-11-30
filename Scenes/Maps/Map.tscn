@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://bri6b8ym6abub"]
+
+[ext_resource type="PackedScene" uid="uid://clcdi87ddjqs4" path="res://Scenes/Entity/player/Player.tscn" id="1_ayncn"]
+[ext_resource type="ArrayMesh" uid="uid://ccoxhmg2ip8xg" path="res://Models/EO0AAAMXQ0YGMC13XX7X56I3L.obj" id="2_qqicb"]
+[ext_resource type="PackedScene" uid="uid://c7xgyt14kog4x" path="res://Scenes/Maps/Menus/pause_menu.tscn" id="3_00pf1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cpmqf"]
+sky_top_color = Color(0.285199, 0.661607, 0.831565, 1)
+sky_horizon_color = Color(0.4, 0.654902, 0.756863, 1)
+ground_bottom_color = Color(0.707897, 0.567225, 0.594675, 1)
+ground_horizon_color = Color(0.788588, 0.581798, 0.576147, 1)
+ground_curve = 0.139289
+sun_angle_max = 15.0
+sun_curve = 1.24231
+
+[sub_resource type="Sky" id="Sky_es0ww"]
+sky_material = SubResource("ProceduralSkyMaterial_cpmqf")
+
+[sub_resource type="Environment" id="Environment_25vrm"]
+background_mode = 2
+background_color = Color(0.4, 0.654902, 0.756863, 1)
+sky = SubResource("Sky_es0ww")
+ambient_light_source = 3
+ambient_light_color = Color(0.401506, 0.655985, 0.755383, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x08mx"]
+size = Vector3(18.994, 1, 24.2836)
+
+[node name="Map" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_25vrm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-0.934695, -7.16525e-07, 0.35545, 0.221195, 0.782781, 0.581658, -0.27824, 0.622296, -0.731663, 0, 16.5344, -20.3431)
+light_color = Color(0.928691, 0.872812, 0.890991, 1)
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 2.0
+directional_shadow_split_2 = 0.0
+directional_shadow_fade_start = 1.0
+directional_shadow_pancake_size = 0.0
+
+[node name="Player" parent="." instance=ExtResource("1_ayncn")]
+transform = Transform3D(1, 0, 2.98023e-08, -1.49012e-08, 1, 0, 0, 2.98023e-08, 1, -5, -0.25638, -1.90735e-06)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.56305, 0.346327, -0.401511)
+shape = SubResource("BoxShape3D_x08mx")
+
+[node name="Eo0aaamxq0ygmc13xx7x56i3l" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.206353, 4.41878, 1.38064)
+mesh = ExtResource("2_qqicb")
+skeleton = NodePath("../..")
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_00pf1")]
