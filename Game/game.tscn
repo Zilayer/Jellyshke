@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://1gxrdmgm1lyn"]
+
+[ext_resource type="PackedScene" uid="uid://clcdi87ddjqs4" path="res://Scenes/Entity/player/Player.tscn" id="1_kwwrw"]
+[ext_resource type="Script" path="res://Game/game.gd" id="1_x5a4k"]
+[ext_resource type="PackedScene" uid="uid://bri6b8ym6abub" path="res://Scenes/Maps/map.tscn" id="2_68s4b"]
+[ext_resource type="PackedScene" uid="uid://c7xgyt14kog4x" path="res://pause_menu.tscn" id="3_7h54x"]
+[ext_resource type="PackedScene" uid="uid://bopxs1qm6spgn" path="res://Scenes/Maps/options.tscn" id="4_6olye"]
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_x5a4k")
+
+[node name="Player" parent="." instance=ExtResource("1_kwwrw")]
+
+[node name="Map" parent="." instance=ExtResource("2_68s4b")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_7h54x")]
+
+[node name="Options" parent="." instance=ExtResource("4_6olye")]
