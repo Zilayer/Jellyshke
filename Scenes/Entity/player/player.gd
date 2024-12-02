@@ -55,7 +55,7 @@ func _input(event):
 						$Camera/Camera3D.position.y -= 0.1
 						$Camera/Camera3D.position.z -= 0.2
 					
-				if event.button_index == 5 and $Camera/Camera3D.position.y < 5 and $Camera/Camera3D.position.z < 10:
+				if event.button_index == 5 and $Camera/Camera3D.position.y < 10 and $Camera/Camera3D.position.z < 20:
 					for i in range(3):
 						$Camera/Camera3D.position.y += 0.1
 						$Camera/Camera3D.position.z += 0.2
