@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr2s4uifbj0mi"]
+
+[ext_resource type="PackedScene" uid="uid://c474yjcdnitsx" path="res://Scenes/Entity/player/pl.fbx" id="1_dl8rg"]
+
+[node name="untitled" type="Skeleton3D"]
+
+[node name="pl" parent="." instance=ExtResource("1_dl8rg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.170231, 0, -0.556259)

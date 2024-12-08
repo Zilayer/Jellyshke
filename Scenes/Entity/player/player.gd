@@ -6,6 +6,7 @@ const JUMP_VELOCITY = 8.0
 
 var rot_x = 0
 var rot_y = 0
+@export var pup:ShaderMaterial
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

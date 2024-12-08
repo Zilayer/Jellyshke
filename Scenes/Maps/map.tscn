@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bri6b8ym6abub"]
+[gd_scene load_steps=9 format=3 uid="uid://bri6b8ym6abub"]
 
 [ext_resource type="PackedScene" uid="uid://clcdi87ddjqs4" path="res://Scenes/Entity/player/Player.tscn" id="1_ayncn"]
 [ext_resource type="PackedScene" uid="uid://c7xgyt14kog4x" path="res://Scenes/Maps/Menus/pause_menu.tscn" id="3_00pf1"]
 [ext_resource type="PackedScene" uid="uid://dll7p4cp772ir" path="res://Models/mainIsland.fbx" id="3_c2l6n"]
+[ext_resource type="PackedScene" uid="uid://b580qncoyioy0" path="res://Scenes/Entity/player/Player2.tscn" id="4_0xwbg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5wpo"]
 cull_mode = 2
@@ -36,6 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35.9102, 0)
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 42.5091, 73.5731, 14.9119)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="WorldNodes"]
+use_collision = true
 size = Vector3(10000, 72.82, 10000)
 material = SubResource("StandardMaterial3D_v5wpo")
 
@@ -53,8 +55,11 @@ directional_shadow_fade_start = 1.0
 directional_shadow_pancake_size = 0.0
 
 [node name="Player" parent="." instance=ExtResource("1_ayncn")]
-transform = Transform3D(1, 0, 2.98023e-08, -1.49012e-08, 1, 0, 0, 2.98023e-08, 1, 47.8183, 114.219, 0)
+transform = Transform3D(1, 0, 2.98023e-08, -1.49012e-08, 1, 0, 0, 2.98023e-08, 1, -21.3452, 78.0319, -20.6092)
 collision_layer = 3
 collision_mask = 3
 
 [node name="PauseMenu" parent="Player" instance=ExtResource("3_00pf1")]
+
+[node name="pl2" parent="." instance=ExtResource("4_0xwbg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5627, 76.8552, -35.2124)

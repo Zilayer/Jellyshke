@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=4 uid="uid://ck64vvam2lcg1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cw571"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8k8ps"]
+resource_name = "Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("/9//f/+f/z//n/9//5//P/9fAAD/X/8//5////9f/7//X////1//f/8f/z//H/9//5//f/9f/z//X/9//5//v/9f/3//X/+//9//P/+fAAD/n/+//1//P/+f/z//n/9/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAACAAEAAwAFAAQABgAIAAcACQALAAoADAAOAA0ADwARABAAAAABABIAAwAEABMABgAHABQACQAKABUADAANABYADwAQABcA"),
+"material": SubResource("StandardMaterial3D_cw571"),
+"name": "Jelly",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD//wAA//////////////////8AAP///////////78AAAAA////v///AAD///+/AAD/////VNUAAAAAAABU1QAAAAD//1TV//8AAAAA/78AAAAA////vwAAAAAAAP+//////wAAVNX//wAA//9U1f//AAAAAFTVAAD//wAA/////wAAAAD//wAAAAAAAP//AAD///////8AAP//////vwAA//8AAFTV//8AAP///7////////9U1f////8AAP///3//v/9//7//f/+/////////////////VNVU1VTVVNVU1VTVAAD/fwAA/38AAP9/qiqqKqoqqiqqKqoq/7//v/+//7//v/+//3//v/////9U1VTVAAD/f6oqqir/v/+/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0toi4"]
+points = PackedVector3Array(-1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1)
+
+[sub_resource type="Animation" id="Animation_8mi51"]
+resource_name = "оуддн"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube/CollisionShape3D:shape")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1lxug"]
+_data = {
+"оуддн": SubResource("Animation_8mi51")
+}
+
+[node name="untitled" type="Node3D"]
+
+[node name="Cube" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21558, -0.0431478, -0.0344906)
+max_contacts_reported = 10
+linear_damp_mode = 1
+
+[node name="Cube" type="MeshInstance3D" parent="Cube"]
+mesh = SubResource("ArrayMesh_8k8ps")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube"]
+shape = SubResource("ConvexPolygonShape3D_0toi4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1lxug")
+}

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c474yjcdnitsx"
-path="res://.godot/imported/pl.fbx-0174d1a2f57b8712b5d5feeb0fbd5aea.scn"
+uid="uid://dkybj30lc2j3"
+path="res://.godot/imported/pl2.fbx-983e2bc3bd025ef89ab111065ad337f2.scn"
 
 [deps]
 
-source_file="res://Scenes/Entity/player/pl.fbx"
-dest_files=["res://.godot/imported/pl.fbx-0174d1a2f57b8712b5d5feeb0fbd5aea.scn"]
+source_file="res://Scenes/Entity/player/pl2.fbx"
+dest_files=["res://.godot/imported/pl2.fbx-983e2bc3bd025ef89ab111065ad337f2.scn"]
 
 [params]
 
@@ -32,24 +32,15 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
+"materials": {
+"Jelly": {
+"use_external/enabled": true,
+"use_external/path": "res://Scenes/Entity/player/jelly.tres"
+}
+},
 "nodes": {
-"PATH:Body": {
-"generate/physics": true
-},
-"PATH:HandLeft": {
-"generate/physics": true
-},
-"PATH:HandRight": {
-"generate/physics": true
-},
-"PATH:Head": {
-"generate/physics": true
-},
-"PATH:LegLeft": {
-"generate/physics": true
-},
-"PATH:LegRight": {
-"generate/physics": true
+"PATH:Armature/Skeleton3D": {
+"rest_pose/external_animation_library": null
 }
 }
 }
