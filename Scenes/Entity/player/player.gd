@@ -12,6 +12,7 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -60,4 +61,4 @@ func _input(event):
 					for i in range(3):
 						$Camera/Camera3D.position.y += 0.1
 						$Camera/Camera3D.position.z += 0.2
-	
+						

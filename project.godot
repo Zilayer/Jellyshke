@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Jellyshke"
-run/main_scene="res://Scenes/Entity/player/Player.tscn"
+run/main_scene="res://Scenes/Maps/Map.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
 
 [filesystem]
 
@@ -71,4 +75,4 @@ Zoom={
 
 [physics]
 
-3d/default_gravity=15.0
+jolt_3d/collision/max_contacts_displayed=10000

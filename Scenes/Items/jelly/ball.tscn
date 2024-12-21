@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://4qb40w3bmg8b"]
+
+[ext_resource type="ArrayMesh" uid="uid://j2nogqy08jm5" path="res://Models/ball.obj" id="1_jlopk"]
+
+[node name="Ball" type="SoftBody3D"]
+mesh = ExtResource("1_jlopk")
+total_mass = 1.01
+linear_stiffness = 0.1
+pressure_coefficient = 500.0

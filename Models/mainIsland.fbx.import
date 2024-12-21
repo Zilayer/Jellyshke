@@ -37,7 +37,8 @@ _subresources={
 "import/skip_import": true
 },
 "PATH:Sphere": {
-"generate/physics": true
+"generate/physics": true,
+"physics/shape_type": 2
 }
 }
 }
