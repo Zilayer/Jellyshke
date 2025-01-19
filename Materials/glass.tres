@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bgqnuk856c6ut"]
+
+[resource]
+blend_mode = 1
+depth_draw_mode = 1
+albedo_color = Color(0.322661, 0.47861, 0.720654, 0.419608)
+roughness_texture_channel = 2
+emission_energy_multiplier = 0.0

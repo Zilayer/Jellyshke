@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://b50rjrdl3wcn4"]
+
+[ext_resource type="PackedScene" uid="uid://cw3ivw4lrrxdc" path="res://Scenes/Maps/Builbing/Houses/LittleHouse/miniLiveHouse.fbx" id="1_8vob3"]
+
+[node name="miniLiveHouse" instance=ExtResource("1_8vob3")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.3372, 0.4742, -3.28126)
+
+[node name="Cube_001" parent="." index="1"]
+transform = Transform3D(-2237.27, -1.24181e-05, -0.000132167, 0.000292559, -100.127, -875.302, -2.61303e-05, -57.8085, 1516.07, 0, 23.4537, 14.6795)
+
+[node name="Fundament" parent="." index="2"]
+transform = Transform3D(1873.91, 0, 0, 0, -8.19113e-05, 445.247, 0, -1873.91, -1.94624e-05, 0, 0, 0)
+
+[node name="Podporka" parent="." index="3"]
+transform = Transform3D(159.573, 0, 0, 0, -6.97515e-06, 1216.09, 0, -159.573, -5.31569e-05, 19.2896, 7.81101, -18.9578)
+
+[node name="Podporka_001" parent="." index="4"]
+transform = Transform3D(159.573, 0, 0, 0, -6.97515e-06, 1216.09, 0, -159.573, -5.31569e-05, -19.0866, 7.81101, -18.9902)
+
+[node name="Podporka_002" parent="." index="5"]
+transform = Transform3D(159.573, 0, 0, 0, -6.97515e-06, 1216.09, 0, -159.573, -5.31569e-05, 19.3685, 7.81101, 18.9728)
+
+[node name="Podporka_003" parent="." index="6"]
+transform = Transform3D(159.573, 0, 0, 0, -6.97515e-06, 1216.09, 0, -159.573, -5.31569e-05, -19.0264, 7.81101, 18.8394)
+
+[node name="Wall" parent="." index="7"]
+transform = Transform3D(1825.33, 0, 0, 0, -2.7022e-06, 793.822, 0, -61.8191, -3.4699e-05, 0, 12.2409, -17.9759)
+
+[node name="Wall_001" parent="." index="8"]
+transform = Transform3D(0.000137809, 61.8191, 3.4699e-05, 0, -2.7022e-06, 793.822, 1825.33, -4.66721e-06, -2.6197e-12, -17.9598, 12.2409, -0.0312855)
+
+[node name="Wall_002" parent="." index="9"]
+transform = Transform3D(0.000137809, 61.8191, 3.4699e-05, 0, -2.7022e-06, 793.822, 1825.33, -4.66721e-06, -2.6197e-12, 18.2061, 12.2409, -0.0312855)
+
+[node name="Wall_003" parent="." index="10"]
+transform = Transform3D(1825.33, 0, 0, 0, -2.7022e-06, 793.822, 0, -61.8191, -3.4699e-05, 0, 12.2409, 17.8595)
+
+[node name="slass1" parent="." index="11"]
+transform = Transform3D(33.1948, 0, 0, 0, -2.06194e-05, 410.25, 0, -471.716, -1.79326e-05, 18.0438, 12.0241, 6.87786)
+
+[node name="slass2" parent="." index="12"]
+transform = Transform3D(-1.45099e-06, -471.716, -1.79326e-05, 0, -2.06194e-05, 410.25, -33.1948, 2.06194e-05, 7.83858e-13, 6.8041, 12.331, -18.0098)
+
+[node name="stairs" parent="." index="13"]
+transform = Transform3D(593.296, 0, 0, 0, -2.03126e-05, 488.018, 0, -464.699, -2.13319e-05, 21.0596, -3.14538, -9.15574)

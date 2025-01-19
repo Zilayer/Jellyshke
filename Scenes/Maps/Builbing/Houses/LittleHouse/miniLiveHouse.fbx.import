@@ -1,0 +1,94 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cw3ivw4lrrxdc"
+path="res://.godot/imported/miniLiveHouse.fbx-405d4308cc6445bc53d9126701e4c29d.scn"
+
+[deps]
+
+source_file="res://Scenes/Maps/Builbing/Houses/LittleHouse/miniLiveHouse.fbx"
+dest_files=["res://.godot/imported/miniLiveHouse.fbx-405d4308cc6445bc53d9126701e4c29d.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"glass": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/glass.tres"
+},
+"wood": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/wood.tres"
+}
+},
+"nodes": {
+"PATH:Cube": {
+"generate/physics": true
+},
+"PATH:Cube_001": {
+"generate/physics": true
+},
+"PATH:Fundament": {
+"generate/physics": true
+},
+"PATH:Podporka": {
+"generate/physics": true
+},
+"PATH:Podporka_001": {
+"generate/physics": true
+},
+"PATH:Podporka_002": {
+"generate/physics": true
+},
+"PATH:Podporka_003": {
+"generate/physics": true
+},
+"PATH:Wall": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Wall_001": {
+"generate/physics": true
+},
+"PATH:Wall_002": {
+"generate/physics": true
+},
+"PATH:Wall_003": {
+"generate/physics": true
+},
+"PATH:slass1": {
+"generate/physics": true
+},
+"PATH:slass2": {
+"generate/physics": true
+},
+"PATH:stairs": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1

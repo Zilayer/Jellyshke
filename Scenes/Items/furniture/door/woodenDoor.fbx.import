@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dll7p4cp772ir"
-path="res://.godot/imported/mainIsland.fbx-c8622e101c163a0d587297b7b6bd07d9.scn"
+uid="uid://b3tpxnxwhvrfd"
+path="res://.godot/imported/woodenDoor.fbx-3ed65c543107f2550a14e9e54cdf5993.scn"
 
 [deps]
 
-source_file="res://Models/mainIsland.fbx"
-dest_files=["res://.godot/imported/mainIsland.fbx-c8622e101c163a0d587297b7b6bd07d9.scn"]
+source_file="res://Scenes/Items/furniture/door/woodenDoor.fbx"
+dest_files=["res://.godot/imported/woodenDoor.fbx-3ed65c543107f2550a14e9e54cdf5993.scn"]
 
 [params]
 
@@ -32,13 +32,15 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
-"nodes": {
-"PATH:Camera": {
-"import/skip_import": true
+"materials": {
+"wood": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/wood.tres"
+}
 },
-"PATH:Sphere": {
-"generate/physics": true,
-"physics/shape_type": 2
+"nodes": {
+"PATH:Cube": {
+"physics/body_type": 1
 }
 }
 }

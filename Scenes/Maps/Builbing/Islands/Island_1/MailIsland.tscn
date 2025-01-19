@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://cve6nt1uquelu"]
 
-[ext_resource type="PackedScene" uid="uid://dll7p4cp772ir" path="res://Models/mainIsland.fbx" id="1_dcyq2"]
+[ext_resource type="PackedScene" uid="uid://dll7p4cp772ir" path="res://Scenes/Maps/Builbing/Islands/Island_1/mainIsland.fbx" id="1_5bj4d"]
 
-[node name="mainIsland" instance=ExtResource("1_dcyq2")]
+[node name="mainIsland" instance=ExtResource("1_5bj4d")]
 
 [node name="Sphere" parent="." index="0"]
 transform = Transform3D(229.624, 0, 0, 0, -1.00372e-05, 35.0879, 0, -229.624, -1.53374e-06, 0, 0, 0)
